@@ -42,5 +42,6 @@
 	}]
 }
 ```
-
+```java
 MyTreeNode {'(+)-(*)',[MyTreeNode {'(+)',[MyTreeNode {'(',null}, MyTreeNode {'+',[MyTreeNode {'+',null}]}, MyTreeNode {')',null}]}, MyTreeNode {'-',null}, MyTreeNode {'(*)',[MyTreeNode {'(',null}, MyTreeNode {'*',[MyTreeNode {'*',null}]}, MyTreeNode {')',null}]}]}
+```
