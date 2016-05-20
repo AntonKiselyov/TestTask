@@ -43,5 +43,5 @@
 }
 ```
 ```java
-MyTreeNode {'(+)-(*)',[MyTreeNode {'(+)',[MyTreeNode {'(',null}, MyTreeNode {'+',[MyTreeNode {'+',null}]}, MyTreeNode {')',null}]}, MyTreeNode {'-',null}, MyTreeNode {'(*)',[MyTreeNode {'(',null}, MyTreeNode {'*',[MyTreeNode {'*',null}]}, MyTreeNode {')',null}]}]}
+ExpressionNode {'(+)-(*)',[ExpressionNode {'(+)',[ExpressionNode {'(',null}, ExpressionNode {'+',[ExpressionNode {'+',null}]}, ExpressionNode {')',null}]}, ExpressionNode {'-',null}, ExpressionNode {'(*)',[ExpressionNode {'(',null}, ExpressionNode {'*',[Expression {'*',null}]}, Expression {')',null}]}]}
 ```
