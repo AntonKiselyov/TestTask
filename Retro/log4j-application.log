@@ -364,3 +364,18 @@ org.antlr.v4.runtime.InputMismatchException
 2016-05-24 13:39:49 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
 2016-05-24 13:39:49 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
 2016-05-24 13:39:49 INFO  ServerApp:39 - Stopping server...
+2016-05-26 13:25:13 INFO  ClientProperties:42 - http://localhost:8080/expressions/
+2016-05-26 13:25:13 INFO  ClientProperties:47 - http://localhost:8080/expressions/
+2016-05-26 13:25:14 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 13:25:15 INFO  ServerApp:38 - Jersey app started with WADL available at http://localhost:8080/expressions/application.wadl
+Hit enter to stop it...
+2016-05-26 13:26:08 INFO  ClientProperties:42 - http://localhost:8080/expressions/
+2016-05-26 13:26:08 INFO  ClientProperties:47 - http://localhost:8080/expressions/
+2016-05-26 13:26:09 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 13:26:10 INFO  ServerApp:38 - Jersey app started with WADL available at http://localhost:8080/expressions/application.wadl
+Hit enter to stop it...
+2016-05-26 13:26:10 INFO  JsonExpressionHandler:60 - json: {"expression":"+","nodes":[{"expression":"+"}]}
+2016-05-26 13:26:10 ERROR ClientApp:45 - JSON : {"expression":"+","nodes":[{"expression":"+"}]}
+2016-05-26 13:26:10 ERROR ClientApp:47 - Tree : ExpressionNode {'+',[ExpressionNode {'+',null}]}
+2016-05-26 13:26:10 ERROR ServerApp:48 - Error when stopping server...
+2016-05-26 13:26:10 INFO  ServerApp:41 - Stopping server...

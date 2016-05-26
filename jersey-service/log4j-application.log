@@ -927,3 +927,50 @@ Hit enter to stop it...
 2016-05-24 13:11:34 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
 2016-05-24 13:11:34 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
 2016-05-24 13:11:34 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 09:54:35 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 09:54:35 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 09:54:36 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 09:54:59 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 09:54:59 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 09:54:59 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 09:55:08 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 09:55:09 INFO  ServerApp:69 - Jersey app started with WADL available at http://localhost:8080/expressions/application.wadl
+Hit enter to stop it...
+2016-05-26 10:25:58 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 10:25:58 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 10:25:58 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 10:43:56 INFO  JsonExpressionHandler:60 - json: {"expression":""}
+2016-05-26 10:48:47 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 10:48:47 INFO  ServerApp:72 - Jersey app started with WADL available at http://localhost:8080/expressions/application.wadl
+Hit enter to stop it...
+2016-05-26 10:50:24 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 10:50:25 INFO  ServerApp:72 - Jersey app started with WADL available at http://localhost:8080/expressions/application.wadl
+Hit enter to stop it...
+2016-05-26 10:51:23 INFO  ServiceProperties:42 - http://localhost:8080/expressions/
+2016-05-26 11:00:07 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 11:00:07 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:00:07 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:02:11 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 11:02:11 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:02:11 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:12:34 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 11:12:34 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:12:34 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:27:22 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 11:27:22 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:27:22 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:39:46 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 11:39:46 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:39:46 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:48:03 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 11:48:03 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:48:03 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:59:31 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 11:59:31 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 11:59:31 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 12:21:38 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 12:21:39 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 12:21:39 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 13:17:17 INFO  JsonExpressionHandler:60 - json: {"expression":"(+)","nodes":[{"expression":"("},{"expression":"+","nodes":[{"expression":"+"}]},{"expression":")"}]}
+2016-05-26 13:17:17 INFO  ServiceProperties:39 - http://localhost:8080/expressions/
+2016-05-26 13:17:17 INFO  ServiceProperties:39 - http://localhost:8080/expressions/

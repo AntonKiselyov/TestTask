@@ -17,6 +17,7 @@ public class ServerApp {
     private static String BASE_URI;
     private final static Logger logger = Logger.getLogger(ServerApp.class);
     private static HttpServer server = null;
+
     /**
      * Starts Grizzly HTTP server exposing JAX-RS resources defined in this application.
      * @return Grizzly HTTP server.
@@ -31,24 +32,26 @@ public class ServerApp {
             return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
         }
     }
+    //For clients
     public static void runServer() throws IOException {
         server = startServer();
         logger.info(String.format("Jersey app started with WADL available at "
                 + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             logger.info("Stopping server...");
-            server.stop();
+            server.shutdownNow();
         }));
         try {
             server.start();
             Thread.currentThread().join();
         } catch (Exception e) {
             logger.error("Error when stopping server...");
-        }}
+        }
+    }
 
     /*for tests*/
-    public static void stopServer() throws IOException {
-        server.stop();
+    public static void stopServer() {
+        server.shutdownNow();
     }
 
     public static HttpServer getServer() {
@@ -69,7 +72,7 @@ public class ServerApp {
         logger.info(String.format("Jersey app started with WADL available at "
                 + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));
         System.in.read();
-        server.stop();
+        server.shutdownNow();
     }
 }
 

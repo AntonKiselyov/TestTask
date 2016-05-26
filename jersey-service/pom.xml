@@ -3,7 +3,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.yandex</groupId>
-    <artifactId>restservice</artifactId>
+    <artifactId>restserver</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
@@ -88,7 +88,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <finalName>simple-restservice-${project.version}</finalName>
+                    <finalName>restserver-${project.version}</finalName>
                     <archive>
                         <manifest>
                             <mainClass>ru.yandex.expressionservice.ServerApp</mainClass>

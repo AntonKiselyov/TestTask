@@ -2,34 +2,32 @@ package ru.yandex.service;
 
 import com.squareup.okhttp.ResponseBody;
 import org.apache.log4j.Logger;
-import ru.yandex.core.*;
+import retrofit.Call;
+import retrofit.Response;
+import retrofit.Retrofit;
+import ru.yandex.core.ClientProperties;
+import ru.yandex.core.ExpressionNodeParser;
+import ru.yandex.model.ExpressionNode;
 import ru.yandex.expressionservice.ServerApp;
-import ru.yandex.model.*;
-import retrofit.*;
-
 
 import java.io.IOException;
 
 /**
  * Created by Admin on 28.04.2016.
  */
-public class ClientApp {
-    final static Logger logger = Logger.getLogger(ClientApp.class);
+class ClientApp {
+    private final static Logger logger = Logger.getLogger(ClientApp.class);
     private static Thread serverThread;
     public static void main(String[] args) throws IOException {
         if (args.length > 0) {
             try {
                 String expression = String.valueOf(args[0]);
                 String BASE_URL = new ClientProperties().getProperties();
-
-                serverThread = new Thread(new Runnable() {
-                    public void run() {
-                        ServerApp serverApp = new ServerApp();
-                        try {
-                            serverApp.runServer();
-                        } catch (IOException e) {
-                            logger.error("Error when run server app: " + e.getMessage());
-                        }
+                serverThread = new Thread(() -> {
+                    try {
+                        ServerApp.runServer();
+                    } catch (IOException e) {
+                        logger.error("Error when run server app: " + e.getMessage());
                     }
                 });
                 serverThread.start();

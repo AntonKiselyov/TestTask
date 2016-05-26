@@ -26,14 +26,11 @@ public class ClientAppTest {
 
     @Before
     public void setUp() throws Exception {
-        thread = new Thread(new Runnable() {
-            public void run() {
-                try {
-                    serverApp = new ServerApp();
-                    serverApp.runServer();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        thread = new Thread(() -> {
+            try {
+                ServerApp.runServer();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         });
         thread.start();

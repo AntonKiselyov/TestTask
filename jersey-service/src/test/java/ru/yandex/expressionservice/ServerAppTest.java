@@ -9,21 +9,19 @@ import org.junit.Test;
  */
 public class ServerAppTest {
 
-    private static ServerApp serverApp;
 
     @Before
     public void setUp() throws Exception {
-        serverApp = new ServerApp();
-        serverApp.initServer(ServerApp.startServer());
+        ServerApp.initServer(ServerApp.startServer());
     }
 
     @Test
     public void testStartServer() throws Exception {
-        assert serverApp.getServer().isStarted();
+        assert ServerApp.getServer().isStarted();
     }
 
     @After
     public void tearDown() throws Exception {
-        serverApp.stopServer();
+        ServerApp.stopServer();
     }
 }

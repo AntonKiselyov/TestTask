@@ -11,7 +11,7 @@
 
     <repositories>
         <repository>
-            <id>localRepo</id>
+            <id>localRepository</id>
             <url>file://${basedir}/lib</url>
         </repository>
     </repositories>
@@ -44,7 +44,7 @@
         </dependency>
         <dependency>
             <groupId>ru.yandex</groupId>
-            <artifactId>restservice</artifactId>
+            <artifactId>restserver</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

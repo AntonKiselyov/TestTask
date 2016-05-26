@@ -9,7 +9,7 @@ import retrofit.http.Path;
  * Created by Admin on 28.04.2016.
  */
 
-public interface ExpressionService {
+interface ExpressionService {
     @GET("expressions/{expression}")
     Call<ResponseBody> getExpressionTree(@Path("expression") String expression);
 }

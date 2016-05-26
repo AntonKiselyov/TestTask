@@ -9,7 +9,6 @@ import org.junit.Test;
 public class JsonExpressionHandlerTest {
 
     private static JsonExpressionHandler jsonExpressionHandler;
-    private static final String expression = "(+)";
     @Before
     public void setUp() throws Exception {
         jsonExpressionHandler = JsonExpressionHandler.getInstance();
