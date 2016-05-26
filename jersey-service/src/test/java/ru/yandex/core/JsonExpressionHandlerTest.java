@@ -1,5 +1,6 @@
 package ru.yandex.core;
 
+import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,6 +17,6 @@ public class JsonExpressionHandlerTest {
 
     @Test
     public void testGetJsonTreeFromExpression() throws Exception {
-        assert jsonExpressionHandler.getJsonTreeFromExpression("(+)").toString().equals("{\"expression\":\"(+)\",\"nodes\":[{\"expression\":\"(\"},{\"expression\":\"+\",\"nodes\":[{\"expression\":\"+\"}]},{\"expression\":\")\"}]}");
+        Assert.assertEquals(jsonExpressionHandler.getJsonTreeFromExpression("a+b").toString(),"{\"variables\":[\"a\",\"b\"],\"tree\":{\"expression\":\"a+b\",\"nodes\":[{\"expression\":\"a\",\"nodes\":[{\"expression\":\"a\"}]},{\"expression\":\"+\"},{\"expression\":\"b\",\"nodes\":[{\"expression\":\"b\"}]}]}}");
     }
 }

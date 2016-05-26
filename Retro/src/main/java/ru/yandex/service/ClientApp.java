@@ -6,11 +6,13 @@ import retrofit.Call;
 import retrofit.Response;
 import retrofit.Retrofit;
 import ru.yandex.core.ClientProperties;
-import ru.yandex.core.ExpressionNodeParser;
-import ru.yandex.model.ExpressionNode;
+import ru.yandex.core.ExpressionCalculator;
+import ru.yandex.core.ResultStructureParser;
 import ru.yandex.expressionservice.ServerApp;
+import ru.yandex.model.ResultStructure;
 
 import java.io.IOException;
+import java.util.LinkedList;
 
 /**
  * Created by Admin on 28.04.2016.
@@ -39,9 +41,24 @@ class ClientApp {
                     Call<ResponseBody> call = expressionService.getExpressionTree(expression);
                     Response<ResponseBody> response = call.execute();
                     String jsonInString = response.body().string();
-                    logger.error("JSON : " + jsonInString);
-                    ExpressionNode expressionNode = ExpressionNodeParser.getInstance().parseJsonToExpressionNode(jsonInString);
-                    logger.error("Tree : " + expressionNode);
+                    logger.debug("JSON : " + jsonInString);
+                    ResultStructure resultStructure = ResultStructureParser.getInstance().parseJsonToResultStructure(jsonInString);
+                    logger.debug("Result : " + resultStructure);
+
+                    LinkedList<Double> list = new LinkedList<>();
+                    //Считываем число аргументов и сами значения переменных
+                    int count = Integer.valueOf(args[1]);
+                    int i = 2;
+                    while(i != count+2) {
+                        list.add(Double.valueOf(args[i]));
+                        i++;
+                    }
+
+                    resultStructure.getVariables().getVars().entrySet().stream()
+                            .forEach(stringDoubleEntry -> {
+                                stringDoubleEntry.setValue(list.removeFirst());
+                            });
+                    logger.debug("Result of expression: " + ExpressionCalculator.getCalculator().calculate(resultStructure.getExpressionNode(),resultStructure.getVariables()));
                 }
                 serverThread.interrupt();
             } catch (NumberFormatException e) {

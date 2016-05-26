@@ -1,12 +1,14 @@
 package ru.yandex.core;
 
-import org.apache.log4j.Logger;
-import ru.yandex.grammatic.CalculatorParser;
-import ru.yandex.grammatic.CalculatorLexer;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
+import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import ru.yandex.grammatic.CalculatorLexer;
+import ru.yandex.grammatic.CalculatorParser;
+
+import java.util.Set;
 
 /**
  * Created by Admin on 27.04.2016.
@@ -55,9 +57,12 @@ public class JsonExpressionHandler {
         });
         ParseTree parseTree;
         parseTree = p.prog().children.get(0).getChild(0);
+        Set<String> vars = p.getVariables();
+        JSONObject jsonTreeObject = new JSONObject();
+        makeJSON(parseTree,jsonTreeObject);
         JSONObject jsonObject = new JSONObject();
-        makeJSON(parseTree,jsonObject);
-        logger.info("json: " + jsonObject.toString());
+        jsonObject.put("tree",jsonTreeObject);
+        jsonObject.put("variables",vars);
         return jsonObject;
     }
 }

@@ -3,7 +3,6 @@ package ru.yandex.core;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.regex.Matcher;
@@ -23,11 +22,7 @@ public class ServiceProperties {
             Properties properties = new Properties();
             String propFileName = "config.properties";
             fileInputStream = new FileInputStream(propFileName);
-            if (fileInputStream != null) {
-                properties.load(fileInputStream);
-            } else {
-                throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
-            }
+            properties.load(fileInputStream);
             String protocol = properties.getProperty("protocol");
             String host = properties.getProperty("host");
             String port = properties.getProperty("port");
@@ -39,7 +34,7 @@ public class ServiceProperties {
                 logger.info(BASE_URI);
             } else {
                 logger.error("Some problem in config.properties file");
-                return "";
+                throw new Exception("Some problem in config.properties file");
             }
         } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());

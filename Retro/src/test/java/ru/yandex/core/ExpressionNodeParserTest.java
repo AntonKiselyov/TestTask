@@ -1,5 +1,6 @@
 package ru.yandex.core;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -11,6 +12,6 @@ public class ExpressionNodeParserTest {
 
     @Test
     public void testParseJsonToExpressionNode() throws Exception {
-        assert  ExpressionNodeParser.getInstance().parseJsonToExpressionNode(testing).toString().equals(expressionNodeString);
+        Assert.assertEquals(ResultStructureParser.getInstance().parseJsonToResultStructure(testing).toString(),expressionNodeString);
     }
 }

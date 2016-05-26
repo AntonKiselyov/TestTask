@@ -1,5 +1,6 @@
 package ru.yandex.core;
 
+import junit.framework.Assert;
 import org.junit.Test;
 
 /**
@@ -10,6 +11,6 @@ public class ServicePropertiesTest {
     @Test
     public void testGetProperties() throws Exception {
         String BASE_URL = "http://localhost:8080/expressions/";
-        assert (new ServiceProperties().getProperties()).equals(BASE_URL);
+        Assert.assertEquals(new ServiceProperties().getProperties(),BASE_URL);
     }
 }

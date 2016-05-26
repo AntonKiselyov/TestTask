@@ -1,5 +1,6 @@
 package ru.yandex.expressionservice;
 
+import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +18,7 @@ public class ServerAppTest {
 
     @Test
     public void testStartServer() throws Exception {
-        assert ServerApp.getServer().isStarted();
+        Assert.assertEquals(ServerApp.getServer().isStarted(),true);
     }
 
     @After

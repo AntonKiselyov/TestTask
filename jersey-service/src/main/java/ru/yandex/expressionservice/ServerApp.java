@@ -25,12 +25,7 @@ public class ServerApp {
     public static HttpServer startServer() throws IOException {
         final ResourceConfig rc = new ResourceConfig().packages("ru.yandex");
         BASE_URI = new ServiceProperties().getProperties();
-        if(!BASE_URI.equals(""))
-            return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
-        else {
-            BASE_URI = "https://" + "localhost" + ":" + "8080" + "/" + "expressions" + "/";
-            return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
-        }
+        return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
     }
     //For clients
     public static void runServer() throws IOException {
@@ -45,7 +40,6 @@ public class ServerApp {
             server.start();
             Thread.currentThread().join();
         } catch (Exception e) {
-            logger.error("Error when stopping server...");
         }
     }
 

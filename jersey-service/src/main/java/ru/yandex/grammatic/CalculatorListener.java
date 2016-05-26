@@ -1,6 +1,8 @@
 // Generated from Calculator.g by ANTLR 4.5.3
 
     package ru.yandex.grammatic;
+    import java.util.Set;
+    import java.util.HashSet;
 
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
