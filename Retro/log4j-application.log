@@ -1025,3 +1025,21 @@ Hit enter to stop it...
 2016-05-27 02:38:00 DEBUG ClientApp:46 - Result : ResultStructure {'Variables {'{a=null, b=null, c=null, d=null}'}',ExpressionNode {'(a+b)*(c-d)',[ExpressionNode {'(a+b)',[ExpressionNode {'(',null}, ExpressionNode {'a+b',[ExpressionNode {'a',[ExpressionNode {'a',null}]}, ExpressionNode {'+',null}, ExpressionNode {'b',[ExpressionNode {'b',null}]}]}, ExpressionNode {')',null}]}, ExpressionNode {'*',null}, ExpressionNode {'(c-d)',[ExpressionNode {'(',null}, ExpressionNode {'c-d',[ExpressionNode {'c',[ExpressionNode {'c',null}]}, ExpressionNode {'-',null}, ExpressionNode {'d',[ExpressionNode {'d',null}]}]}, ExpressionNode {')',null}]}]}}
 2016-05-27 02:38:00 DEBUG ClientApp:61 - Result of expression: 60.0
 2016-05-27 02:38:00 INFO  ServerApp:36 - Stopping server...
+2016-05-27 02:40:09 DEBUG ClientProperties:34 - http://localhost:8080/expressions/
+2016-05-27 02:40:09 DEBUG ClientProperties:39 - http://localhost:8080/expressions/
+2016-05-27 02:40:09 INFO  ServiceProperties:34 - http://localhost:8080/expressions/
+2016-05-27 02:40:10 INFO  ServerApp:33 - Jersey app started with WADL available at http://localhost:8080/expressions/application.wadl
+Hit enter to stop it...
+2016-05-27 02:40:11 DEBUG ClientApp:44 - JSON : {"variables":["a","b","c","d"],"tree":{"expression":"(a+b)*(c-d)","nodes":[{"expression":"(a+b)","nodes":[{"expression":"("},{"expression":"a+b","nodes":[{"expression":"a","nodes":[{"expression":"a"}]},{"expression":"+"},{"expression":"b","nodes":[{"expression":"b"}]}]},{"expression":")"}]},{"expression":"*"},{"expression":"(c-d)","nodes":[{"expression":"("},{"expression":"c-d","nodes":[{"expression":"c","nodes":[{"expression":"c"}]},{"expression":"-"},{"expression":"d","nodes":[{"expression":"d"}]}]},{"expression":")"}]}]}}
+2016-05-27 02:40:11 DEBUG ClientApp:46 - Result : ResultStructure {'Variables {'{a=null, b=null, c=null, d=null}'}',ExpressionNode {'(a+b)*(c-d)',[ExpressionNode {'(a+b)',[ExpressionNode {'(',null}, ExpressionNode {'a+b',[ExpressionNode {'a',[ExpressionNode {'a',null}]}, ExpressionNode {'+',null}, ExpressionNode {'b',[ExpressionNode {'b',null}]}]}, ExpressionNode {')',null}]}, ExpressionNode {'*',null}, ExpressionNode {'(c-d)',[ExpressionNode {'(',null}, ExpressionNode {'c-d',[ExpressionNode {'c',[ExpressionNode {'c',null}]}, ExpressionNode {'-',null}, ExpressionNode {'d',[ExpressionNode {'d',null}]}]}, ExpressionNode {')',null}]}]}}
+2016-05-27 02:40:11 DEBUG ClientApp:61 - Result of expression: 60.0
+2016-05-27 02:40:11 INFO  ServerApp:36 - Stopping server...
+2016-05-27 02:53:01 DEBUG ClientProperties:34 - http://localhost:8080/expressions/
+2016-05-27 02:53:01 DEBUG ClientProperties:39 - http://localhost:8080/expressions/
+2016-05-27 02:53:01 INFO  ServiceProperties:34 - http://localhost:8080/expressions/
+2016-05-27 02:53:02 INFO  ServerApp:33 - Jersey app started with WADL available at http://localhost:8080/expressions/application.wadl
+Hit enter to stop it...
+2016-05-27 02:53:02 DEBUG ClientApp:44 - JSON : {"variables":["a","b","c","d"],"tree":{"expression":"(a+b)*(c-d)","nodes":[{"expression":"(a+b)","nodes":[{"expression":"("},{"expression":"a+b","nodes":[{"expression":"a","nodes":[{"expression":"a"}]},{"expression":"+"},{"expression":"b","nodes":[{"expression":"b"}]}]},{"expression":")"}]},{"expression":"*"},{"expression":"(c-d)","nodes":[{"expression":"("},{"expression":"c-d","nodes":[{"expression":"c","nodes":[{"expression":"c"}]},{"expression":"-"},{"expression":"d","nodes":[{"expression":"d"}]}]},{"expression":")"}]}]}}
+2016-05-27 02:53:02 DEBUG ClientApp:46 - Result : ResultStructure {'Variables {'{a=null, b=null, c=null, d=null}'}',ExpressionNode {'(a+b)*(c-d)',[ExpressionNode {'(a+b)',[ExpressionNode {'(',null}, ExpressionNode {'a+b',[ExpressionNode {'a',[ExpressionNode {'a',null}]}, ExpressionNode {'+',null}, ExpressionNode {'b',[ExpressionNode {'b',null}]}]}, ExpressionNode {')',null}]}, ExpressionNode {'*',null}, ExpressionNode {'(c-d)',[ExpressionNode {'(',null}, ExpressionNode {'c-d',[ExpressionNode {'c',[ExpressionNode {'c',null}]}, ExpressionNode {'-',null}, ExpressionNode {'d',[ExpressionNode {'d',null}]}]}, ExpressionNode {')',null}]}]}}
+2016-05-27 02:53:02 DEBUG ClientApp:61 - Result of expression: 60.0
+2016-05-27 02:53:02 INFO  ServerApp:36 - Stopping server...
